@@ -26,27 +26,34 @@ const HomePage = () => {
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-teal-50 via-cyan-50 to-teal-100 flex flex-col items-center justify-center px-4">
-            <div className="w-full max-w-md space-y-4">
-                <h1 className="text-3xl font-bold text-teal-900 text-center mb-8">
-                    Welcome back, <span className="text-teal-700">{username}</span>
-                </h1>
+            <div className="w-full max-w-md">
+                <div className="bg-white/70 backdrop-blur-sm rounded-2xl border border-teal-200 shadow-md p-8 space-y-5">
+                    <h1 className="text-2xl font-bold text-teal-900">
+                        Welcome back, <span className="text-teal-700">{username}</span>
+                    </h1>
 
-                <div className="bg-white/70 backdrop-blur-sm rounded-xl p-5 border border-teal-200 shadow-sm">
-                    <p className="text-xs uppercase tracking-widest text-teal-700 mb-1">Email</p>
-                    <p className="text-teal-900 font-medium break-all">{email}</p>
+                    <div className="border-t border-teal-100 pt-5 space-y-4">
+                        <div>
+                            <p className="text-xs uppercase tracking-widest text-teal-700 mb-1">Username</p>
+                            <p className="text-teal-900 font-medium">{username}</p>
+                        </div>
+                        <div>
+                            <p className="text-xs uppercase tracking-widest text-teal-700 mb-1">Email</p>
+                            <p className="text-teal-900 font-medium break-all">{email}</p>
+                        </div>
+                        <div>
+                            <p className="text-xs uppercase tracking-widest text-teal-700 mb-1">User ID</p>
+                            <p className="text-teal-900 font-mono text-sm break-all">{id}</p>
+                        </div>
+                    </div>
+
+                    <button
+                        onClick={handleClick}
+                        className="w-full pt-2 py-3 rounded-xl bg-teal-700 hover:bg-teal-600 active:bg-teal-800 text-white font-semibold transition-colors shadow-sm"
+                    >
+                        Log Out
+                    </button>
                 </div>
-
-                <div className="bg-white/70 backdrop-blur-sm rounded-xl p-5 border border-teal-200 shadow-sm">
-                    <p className="text-xs uppercase tracking-widest text-teal-700 mb-1">User ID</p>
-                    <p className="text-teal-900 font-mono text-sm break-all">{id}</p>
-                </div>
-
-                <button
-                    onClick={handleClick}
-                    className="w-full mt-6 py-3 rounded-xl bg-teal-700 hover:bg-teal-600 active:bg-teal-800 text-white font-semibold transition-colors shadow-sm"
-                >
-                    Log Out
-                </button>
             </div>
         </div>
     );

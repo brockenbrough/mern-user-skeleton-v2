@@ -2,11 +2,11 @@ const express = require("express");
 const router = express.Router();
 const bcrypt = require("bcrypt");
 const userModel = require('../models/userModel')
-const { newUserValidation } = require('../models/userValidator');
+const { userValidation } = require('../models/userValidator');
 const { generateAccessToken } = require('../utilities/generateToken');
 
 router.post('/editUser', async (req, res) => {
-    const { error } = newUserValidation(req.body);
+    const { error } = userValidation(req.body);
     if (error) return res.status(400).send({ message: error.errors[0].message });
 
     const { userId, username, email, password } = req.body

@@ -17,8 +17,8 @@ const PrivateUserProfile = () => {
   }, []);
 
   if (!user) return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-950">
-      <p className="text-gray-400 text-lg">Log in to view this page.</p>
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-teal-50 via-cyan-50 to-teal-100">
+      <p className="text-teal-600 text-lg">Log in to view this page.</p>
     </div>
   );
 
@@ -27,40 +27,40 @@ const PrivateUserProfile = () => {
     : "?";
 
   return (
-    <div className="min-h-screen bg-gray-950 flex flex-col items-center justify-center px-4">
+    <div className="min-h-screen bg-gradient-to-br from-teal-50 via-cyan-50 to-teal-100 flex flex-col items-center justify-center px-4">
       <div className="w-full max-w-sm text-center space-y-6">
 
         {/* Avatar */}
-        <div className="mx-auto w-24 h-24 rounded-full bg-pink-600 flex items-center justify-center text-white text-3xl font-bold shadow-lg">
+        <div className="mx-auto w-24 h-24 rounded-full bg-teal-500 border-4 border-teal-200 flex items-center justify-center text-white text-3xl font-bold shadow-md">
           {initials}
         </div>
 
-        {/* Username */}
+        {/* Username + email */}
         <div>
-          <h1 className="text-2xl font-bold text-white">{user.username}</h1>
-          <p className="text-gray-400 text-sm mt-1">{user.email}</p>
+          <h1 className="text-2xl font-bold text-teal-900">{user.username}</h1>
+          <p className="text-teal-500 text-sm mt-1">{user.email}</p>
         </div>
 
-        {/* Info cards */}
-        <div className="bg-gray-800 rounded-xl p-5 border border-gray-700 text-left space-y-3">
+        {/* Info card */}
+        <div className="bg-white/70 backdrop-blur-sm rounded-xl p-5 border border-teal-200 shadow-sm text-left space-y-3">
           <div>
-            <p className="text-xs uppercase tracking-widest text-gray-400">Username</p>
-            <p className="text-white font-medium">{user.username}</p>
+            <p className="text-xs uppercase tracking-widest text-teal-500">Username</p>
+            <p className="text-teal-900 font-medium">{user.username}</p>
           </div>
-          <div className="border-t border-gray-700 pt-3">
-            <p className="text-xs uppercase tracking-widest text-gray-400">Email</p>
-            <p className="text-white font-medium break-all">{user.email}</p>
+          <div className="border-t border-teal-100 pt-3">
+            <p className="text-xs uppercase tracking-widest text-teal-500">Email</p>
+            <p className="text-teal-900 font-medium break-all">{user.email}</p>
           </div>
-          <div className="border-t border-gray-700 pt-3">
-            <p className="text-xs uppercase tracking-widest text-gray-400">User ID</p>
-            <p className="text-white font-mono text-sm break-all">{user.id}</p>
+          <div className="border-t border-teal-100 pt-3">
+            <p className="text-xs uppercase tracking-widest text-teal-500">User ID</p>
+            <p className="text-teal-900 font-mono text-sm break-all">{user.id}</p>
           </div>
         </div>
 
         {/* Log out button */}
         <button
           onClick={() => setShowModal(true)}
-          className="w-full py-3 rounded-xl bg-pink-600 hover:bg-pink-500 active:bg-pink-700 text-white font-semibold transition-colors"
+          className="w-full py-3 rounded-xl bg-teal-600 hover:bg-teal-500 active:bg-teal-700 text-white font-semibold transition-colors shadow-sm"
         >
           Log Out
         </button>
@@ -68,20 +68,20 @@ const PrivateUserProfile = () => {
 
       {/* Confirm modal */}
       {showModal && (
-        <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 px-4">
-          <div className="bg-gray-800 rounded-2xl p-6 w-full max-w-sm border border-gray-700 shadow-xl">
-            <h2 className="text-white text-lg font-bold mb-2">Log Out</h2>
-            <p className="text-gray-400 mb-6">Are you sure you want to log out?</p>
+        <div className="fixed inset-0 bg-teal-900/40 backdrop-blur-sm flex items-center justify-center z-50 px-4">
+          <div className="bg-white/90 rounded-2xl p-6 w-full max-w-sm border border-teal-200 shadow-xl">
+            <h2 className="text-teal-900 text-lg font-bold mb-2">Log Out</h2>
+            <p className="text-teal-600 mb-6">Are you sure you want to log out?</p>
             <div className="flex gap-3">
               <button
                 onClick={() => setShowModal(false)}
-                className="flex-1 py-2 rounded-xl border border-gray-600 text-gray-300 hover:bg-gray-700 transition-colors"
+                className="flex-1 py-2 rounded-xl border border-teal-300 text-teal-700 hover:bg-teal-50 transition-colors"
               >
                 Cancel
               </button>
               <button
                 onClick={handleLogout}
-                className="flex-1 py-2 rounded-xl bg-pink-600 hover:bg-pink-500 text-white font-semibold transition-colors"
+                className="flex-1 py-2 rounded-xl bg-teal-600 hover:bg-teal-500 text-white font-semibold transition-colors"
               >
                 Log Out
               </button>

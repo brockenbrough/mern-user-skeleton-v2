@@ -1,34 +1,13 @@
-import React, { useEffect, useState } from "react";
-import getUserInfo from '../utilities/decodeJwt';
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import ReactNavbar from 'react-bootstrap/Navbar';
+import React from "react";
 
-
-// Here, we display our Navbar
 export default function Navbar() {
-  // We are pulling in the user's info but not using it for now.
-  // Warning disabled: 
-  // eslint-disable-next-line
-  const [user, setUser] = useState({})
-
-  useEffect(() => {
-  setUser(getUserInfo())
-  }, [])
-  
-  // if (!user) return null   - for now, let's show the bar even not logged in.
-  // we have an issue with getUserInfo() returning null after a few minutes
-  // it seems.
   return (
-    <ReactNavbar bg="dark" variant="dark">
-    <Container>
-      <Nav className="me-auto">
-        <Nav.Link href="/">Start</Nav.Link>
-        <Nav.Link href="/home">Home</Nav.Link>
-        <Nav.Link href="/privateUserProfile">Profile</Nav.Link>
-      </Nav>
-    </Container>
-  </ReactNavbar>
-
+    <nav className="bg-teal-700/90 backdrop-blur-sm shadow-sm">
+      <div className="max-w-2xl mx-auto px-6 py-3 flex gap-6">
+        <a href="/" className="text-teal-100 hover:text-white font-medium transition-colors">Start</a>
+        <a href="/home" className="text-teal-100 hover:text-white font-medium transition-colors">Home</a>
+        <a href="/privateUserProfile" className="text-teal-100 hover:text-white font-medium transition-colors">Profile</a>
+      </div>
+    </nav>
   );
 }

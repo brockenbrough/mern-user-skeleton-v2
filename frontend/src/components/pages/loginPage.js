@@ -65,17 +65,17 @@ const Login = () => {
             />
           </div>
 
-          {error && <p className="text-red-500 text-sm">{error}</p>}
+          {error && <p className="text-red-700 text-sm">{error}</p>}
 
           <button
             type="submit"
-            className="w-full py-2 rounded-xl bg-teal-600 hover:bg-teal-500 active:bg-teal-700 text-white font-semibold transition-colors shadow-sm"
+            className="w-full py-2 rounded-xl bg-teal-700 hover:bg-teal-600 active:bg-teal-800 text-white font-semibold transition-colors shadow-sm"
           >
             Log In
           </button>
         </form>
 
-        <p className="text-center text-sm text-teal-600 mt-5">
+        <p className="text-center text-sm text-teal-800 mt-5">
           Don't have an account?{" "}
           <Link to="/signup" className="font-semibold text-teal-700 hover:underline">Sign up</Link>
         </p>

@@ -7,12 +7,13 @@ const Landingpage = () => {
                 <div className="w-16 h-16 mx-auto mb-5 rounded-full bg-teal-100 border-2 border-teal-300 flex items-center justify-center">
                     <span className="text-3xl">🌊</span>
                 </div>
-                <h1 className="text-2xl font-bold text-teal-900 mb-2">User Skeleton App</h1>
-                <p className="text-teal-600 mb-8 text-sm">A starting point for your application.</p>
+                <h1 className="text-2xl font-bold text-teal-900 mb-1">Professor Brockenbrough's User Skeleton App</h1>
+                <p className="text-teal-800 text-sm mb-1">A starting point for an application.</p>
+                <p className="text-teal-700 text-sm mb-8">If you see this with a blue background and white text, Tailwind is working!</p>
                 <div className="flex gap-3 justify-center">
                     <a
                         href="/signup"
-                        className="px-6 py-2 rounded-xl bg-teal-600 hover:bg-teal-500 text-white font-semibold transition-colors shadow-sm"
+                        className="px-6 py-2 rounded-xl bg-teal-700 hover:bg-teal-600 text-white font-semibold transition-colors shadow-sm"
                     >
                         Sign Up
                     </a>

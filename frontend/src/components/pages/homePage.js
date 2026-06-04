@@ -18,7 +18,7 @@ const HomePage = () => {
 
     if (!user) return (
         <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-teal-50 via-cyan-50 to-teal-100">
-            <p className="text-teal-600 text-lg">Log in to view this page.</p>
+            <p className="text-teal-800 text-lg">Log in to view this page.</p>
         </div>
     );
 
@@ -28,22 +28,22 @@ const HomePage = () => {
         <div className="min-h-screen bg-gradient-to-br from-teal-50 via-cyan-50 to-teal-100 flex flex-col items-center justify-center px-4">
             <div className="w-full max-w-md space-y-4">
                 <h1 className="text-3xl font-bold text-teal-900 text-center mb-8">
-                    Welcome back, <span className="text-teal-600">{username}</span>
+                    Welcome back, <span className="text-teal-700">{username}</span>
                 </h1>
 
                 <div className="bg-white/70 backdrop-blur-sm rounded-xl p-5 border border-teal-200 shadow-sm">
-                    <p className="text-xs uppercase tracking-widest text-teal-500 mb-1">Email</p>
+                    <p className="text-xs uppercase tracking-widest text-teal-700 mb-1">Email</p>
                     <p className="text-teal-900 font-medium break-all">{email}</p>
                 </div>
 
                 <div className="bg-white/70 backdrop-blur-sm rounded-xl p-5 border border-teal-200 shadow-sm">
-                    <p className="text-xs uppercase tracking-widest text-teal-500 mb-1">User ID</p>
+                    <p className="text-xs uppercase tracking-widest text-teal-700 mb-1">User ID</p>
                     <p className="text-teal-900 font-mono text-sm break-all">{id}</p>
                 </div>
 
                 <button
                     onClick={handleClick}
-                    className="w-full mt-6 py-3 rounded-xl bg-teal-600 hover:bg-teal-500 active:bg-teal-700 text-white font-semibold transition-colors shadow-sm"
+                    className="w-full mt-6 py-3 rounded-xl bg-teal-700 hover:bg-teal-600 active:bg-teal-800 text-white font-semibold transition-colors shadow-sm"
                 >
                     Log Out
                 </button>

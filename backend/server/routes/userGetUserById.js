@@ -3,12 +3,12 @@ const router = express.Router();
 const z = require("zod");
 const bcrypt = require("bcrypt");
 
-const newUserModel = require("../models/userModel");
+const userModel = require("../models/userModel");
 
 router.get("/getUserById", async (req, res) => {
   var { userId } = req.body;
 
-  newUserModel.findById(userId, function (err, user) {
+  userModel.findById(userId, function (err, user) {
     if (err) {
       console.log(err);
     }

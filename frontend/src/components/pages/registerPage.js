@@ -5,23 +5,23 @@ import axios from "axios";
 const url = `${process.env.REACT_APP_BACKEND_SERVER_URI}/user/signup`;
 
 const Register = () => {
-  const [data, setData] = useState({ username: "", email: "", password: "" });
+  const [formData, setData] = useState({ username: "", email: "", password: "" });
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
   const handleChange = ({ currentTarget: input }) => {
-    setData({ ...data, [input.name]: input.value });
+    setData({ ...formData, [input.name]: input.value });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post(url, data);
+      await axios.post(url, formData);
       window.alert("Registration successful! Please log in.");
       navigate("/login");
     } catch (error) {
       if (error.response && error.response.status >= 400 && error.response.status <= 500) {
-        setError(error.response.data.message);
+        setError(error.response.formData.message);
       }
     }
   };

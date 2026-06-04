@@ -6,7 +6,7 @@ const HomePage = () => {
     const [user, setUser] = useState({});
     const navigate = useNavigate();
 
-    const handleClick = (e) => {
+    const handleLogout = (e) => {
         e.preventDefault();
         localStorage.removeItem('accessToken');
         return navigate('/');
@@ -48,7 +48,7 @@ const HomePage = () => {
                     </div>
 
                     <button
-                        onClick={handleClick}
+                        onClick={handleLogout}
                         className="w-full pt-2 py-3 rounded-xl bg-teal-700 hover:bg-teal-600 active:bg-teal-800 text-white font-semibold transition-colors shadow-sm"
                     >
                         Log Out
